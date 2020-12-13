@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <title>responsiveVoice test By Prasant</title>
+
+    </head>
+
+    <body>
+<h1> This is Prasant's code to check the function of responsiveVoice.</h1>
+<p> Write something in the textarea (input field) and click the play button to start listening. Click the pause button to pause, resume to resume and stop button to stop.<br> I haven't added any CSS to make it beautiful, because it's just to test.</p>
+    <textarea rows="15" cols="40" id="txt"></textarea>
+
+    
+
+    <button onclick="pl()">play</button>
+
+    <button onclick="pu()">pause</button>
+
+    <button onclick="re()">resume</button>
+
+    <button onclick="st()">stop</button>
+
+        <script>
+
+        console.log=function(){}
+
+        console.error=function(){}
+
+        
+
+            function pl(){
+
+            var txts = document.getElementById("txt").value;
+
+                responsiveVoice.speak(txts, "Hindi Male", {rate: 0.7, volume: 1, pitch: 1});
+
+            }
+
+            function st(){
+
+                responsiveVoice.cancel();
+
+            }
+
+            function pu(){
+
+                responsiveVoice.pause();
+
+            }
+
+            
+
+            function re(){
+
+                responsiveVoice.resume();
+
+            }
+
+            
+
+        </script>
+
+        
+
+  <script src="https://code.responsivevoice.org/responsivevoice.js?key=rxa2NkJj"></script>
+
+    </body>
+
+</html>
